@@ -1,0 +1,162 @@
+@use '../styles/variables' as vars;
+@use '../styles/mixins' as mix;
+
+.menu-page {
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, rgba(255, 127, 80, 0.1), rgba(255, 69, 0, 0.1));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; // Cambiado de height a min-height para móviles
+
+  .menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    flex-direction: row-reverse;
+    gap: 3rem;
+
+    /* Mobile Styles */
+    @include mix.respond(md) { // Asumo que 'md' es tu breakpoint para móvil
+      flex-direction: column;
+      gap: 2rem;
+      padding: 1rem;
+    }
+
+    /* Image Styling */
+    .menu-image-container {
+      flex: 1;
+      max-width: 600px;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+
+      @include mix.respond(md) {
+        max-width: 100%;
+        width: 100%;
+        order: 1; // Mover la imagen arriba en móviles
+      }
+
+      .menu-image {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+        
+        &:hover {
+          transform: scale(1.1);
+        }
+
+        @include mix.respond(md) {
+          &:hover {
+            transform: none; // Eliminar hover en móviles
+          }
+        }
+      }
+    }
+
+    /* Content Styling */
+    .menu-content {
+      flex: 1;
+      max-width: 500px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include mix.respond(md) {
+        max-width: 100%;
+        text-align: center;
+        order: 2; // Mover el contenido abajo en móviles
+        padding: 0 1rem;
+      }
+
+      .menu-header {
+        margin-bottom: 2rem;
+
+        @include mix.respond(md) {
+          margin-bottom: 1.5rem;
+        }
+
+        h1 {
+          font-family: vars.$font-main;
+          font-weight: 700;
+          color: vars.$color-accent;
+          font-size: 3rem;
+          letter-spacing: 1px;
+          margin-bottom: 0.5rem;
+
+          @include mix.respond(md) {
+            font-size: 2.2rem;
+          }
+        }
+
+        p {
+          font-family: vars.$font-main;
+          font-weight: 400;
+          color: vars.$color-text;
+          font-size: 1.2rem;
+
+          @include mix.respond(md) {
+            font-size: 1.1rem;
+          }
+        }
+      }
+
+      .menu-description {
+        font-family: vars.$font-main;
+        font-weight: 400;
+        color: vars.$color-text;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+
+        @include mix.respond(md) {
+          font-size: 1rem;
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      .menu-button {
+        display: flex;
+        justify-content: flex-start;
+
+        @include mix.respond(md) {
+          justify-content: center;
+        }
+
+        .download-btn {
+          background: vars.$color-accent;
+          color: #fff;
+          font-size: 1.3rem;
+          padding: 1rem 3rem;
+          border: none;
+          border-radius: 50px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+          @include mix.respond(md) {
+            font-size: 1.1rem;
+            padding: 0.8rem 2rem;
+          }
+
+          &:hover {
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-3px);
+          }
+
+          &:active {
+            background: vars.$color-accent;
+            transform: translateY(2px);
+          }
+        }
+      }
+    }
+  }
+}

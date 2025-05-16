@@ -1,0 +1,26 @@
+body {
+    font-family: $font-main;
+    color: $color-text;
+    background-color: $color-bg;
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $font-heading;
+    color: $color-text;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+  }
+  
+  p {
+    margin-bottom: 1em;
+  }
+  
+  a {
+    font-weight: 500;
+    transition: color 0.2s ease;
+    &:hover {
+      color: $color-accent;
+    }
+  }
+  

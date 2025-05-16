@@ -1,0 +1,14 @@
+// 1. Variables & Mixins
+@import './variables';
+@import './mixins';
+
+// 2. Reset & Typography
+@import './reset';
+@import './typography';
+
+// 3. Layout helpers
+@import './layout';
+
+html{
+    scroll-behavior: smooth;
+}

@@ -1,0 +1,72 @@
+@use '../styles/variables' as vars;
+@use '../styles/mixins' as mix;
+
+.footer {
+  background-color: #f5e4d7; // Soft creamy beige color, not too dark or bright
+  color: #4b2e20; // Deep chocolate for the text for good contrast
+  padding: 6rem 2rem 3rem;
+  text-align: center;
+  font-family: vars.$font-main;
+  border-top: 6px solid #cfa97e; // Warm accent line at the top
+
+  .footer-top {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    h2 {
+      font-family: vars.$font-heading;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #a0522d; // Warm brown accent color for the header
+    }
+
+    p {
+      font-size: 1.4rem;
+      margin-bottom: 3rem;
+      max-width: 700px;
+      margin-inline: auto;
+      line-height: 1.8;
+      color: #6a4a3c; // Slightly lighter brown for the paragraph text
+    }
+
+    .footer-socials {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+
+      a {
+        font-size: 2.2rem;
+        color: #4b2e20; // Main text color
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: scale(1.2);
+          color: #a0522d; // Accent hover color
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    margin-top: 4rem;
+    font-size: 1rem;
+    opacity: 0.8;
+    color: #6a4a3c; // Muted text for footer bottom
+  }
+
+  @include mix.respond(sm) {
+    padding: 4rem 1rem 2rem;
+
+    .footer-top h2 {
+      font-size: 2.2rem;
+    }
+
+    .footer-top p {
+      font-size: 1.15rem;
+    }
+
+    .footer-socials a {
+      font-size: 2rem;
+    }
+  }
+}

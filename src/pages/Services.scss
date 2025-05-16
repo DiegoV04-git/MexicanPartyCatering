@@ -1,0 +1,169 @@
+@use '../styles/variables' as vars; // Adjust the path based on where variables.scss is located
+@use '../styles/mixins' as mix;
+
+.services {
+  // Use the imported Sass variables
+  $primary-color: vars.$color-accent;
+  $accent-color: vars.$color-muted;
+  $text-dark: vars.$color-text;
+  $text-light: vars.$color-surface;
+  $section-bg: vars.$color-bg;
+
+  padding: 8rem 2rem;
+  background: $section-bg;
+  position: relative;
+  overflow: hidden;
+
+  .section-title {
+    text-align: center;
+    font: 700 3rem/1.1 vars.$font-heading, serif;
+    color: $text-dark;
+    margin-bottom: 4rem;
+    position: relative;
+    padding-bottom: 1rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 3px;
+      background: $primary-color;
+    }
+  }
+
+  .services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    .service-item {
+      background: vars.$color-surface;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+        .service-image {
+          transform: scale(1.05);
+        }
+      }
+
+      .media {
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .image-container {
+          height: 250px;
+          overflow: hidden;
+          position: relative;
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.5) 100%);
+          }
+
+          .service-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+          }
+        }
+
+        .service-info {
+          padding: 1.5rem;
+          flex-grow: 1;
+
+          h3 {
+            font: 600 1.5rem/1.2 vars.$font-main, sans-serif;
+            color: $text-dark;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 1rem;
+
+            &::before {
+              content: '';
+              position: absolute;
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 5px;
+              height: 70%;
+              background: $accent-color;
+              border-radius: 2px;
+            }
+          }
+
+          p {
+            font: 400 1rem/1.6 'Open Sans', sans-serif;
+            color: vars.$color-muted;
+            margin-bottom: 1.5rem;
+          }
+
+          .service-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.25rem;
+            background: $primary-color;
+            color: $text-light;
+            font: 600 0.9rem vars.$font-main, sans-serif;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 123, 95, 0.3);
+
+            &:hover {
+              transform: translateY(-2px);
+              box-shadow: 0 4px 12px rgba(0, 123, 95, 0.4);
+              background: darken($primary-color, 10%);
+            }
+
+            &::after {
+              content: '→';
+              transition: transform 0.3s ease;
+            }
+
+            &:hover::after {
+              transform: translateX(3px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 6rem 2rem;
+
+    .section-title {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 4rem 1.5rem;
+
+    .services-list {
+      grid-template-columns: 1fr;
+      max-width: 600px;
+      gap: 1.5rem;
+    }
+  }
+}

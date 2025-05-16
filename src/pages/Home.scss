@@ -1,0 +1,311 @@
+/* src/pages/Home.scss */
+@use '../styles/variables' as vars;
+@use '../styles/mixins' as mix;
+
+.home {
+  .hero {
+    padding: 4rem 1rem;
+    background-color: vars.$color-bg;
+    text-align: center;
+
+    h2 {
+      font-family: vars.$font-heading;
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      color: vars.$color-text;
+    }
+
+    p {
+      font-size: 1.125rem;
+      margin: 0 auto 2rem;
+      color: vars.$color-muted;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      background-color: vars.$color-accent;
+      color: vars.$color-surface;
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+      border-radius: 0.5rem;
+      transition: filter 0.3s ease;
+
+      &:hover {
+        filter: brightness(0.9);
+      }
+    }
+
+    @include mix.respond(md) {
+      padding: 3rem 1rem;
+      h2 { font-size: 2rem; }
+      p  { font-size: 1rem; }
+    }
+  }
+
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+    padding: 4rem 2rem;
+    background-color: #fff9f5;
+    max-width: 1200px;
+    margin: 2rem auto;
+    border-radius: 1rem;
+
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: flex-start;
+      padding-right: 1rem;
+
+      .subtitle {
+        color: #cfa97e;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 1rem;
+        letter-spacing: 1px;
+      }
+
+      h2 {
+        font-family: vars.$font-heading;
+        font-size: 2.5rem;
+        color: #b35c38;
+        margin: 0;
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: #2c2c2c;
+        background: white;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+        position: relative;
+        margin: 0;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: -30px;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 50px;
+          height: 2px;
+          background: vars.$color-accent;
+        }
+      }
+
+      .about-cta {
+        background: transparent;
+        color: vars.$color-text;
+        padding: 0.8rem 2rem;
+        font-weight: 600;
+        border-radius: 2rem;
+        border: 2px solid vars.$color-accent;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1rem;
+
+        &::after {
+          content: '→';
+          transition: transform 0.2s ease;
+        }
+
+        &:hover {
+          background: rgba(vars.$color-accent, 0.08);
+          transform: translateY(-2px);
+          box-shadow: 0 5px 15px rgba(vars.$color-accent, 0.1);
+
+          &::after {
+            transform: translateX(3px);
+          }
+        }
+
+        &:active {
+          transform: translateY(0);
+        }
+      }
+    }
+
+    .about-image-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+        max-width: 450px;
+        border-radius: 1rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        z-index: 2;
+      }
+
+      .circle-decor {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 6px solid #f4e6dc;
+        border-radius: 50% 50% 0 0;
+        top: -10%;
+        left: 0;
+        z-index: 1;
+        transform: scale(1.2);
+        pointer-events: none;
+      }
+    }
+
+    @include mix.respond(lg) {
+      gap: 2rem;
+      padding: 3rem 1rem;
+
+      .about-content p {
+        font-size: 1rem;
+        padding: 1.25rem;
+      }
+    }
+
+    @include mix.respond(md) {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 2rem;
+
+      .about-content {
+        align-items: center;
+        padding-right: 0;
+
+        p {
+          text-align: center;
+          padding: 1.25rem !important;
+
+          &::before {
+            left: 50%;
+            top: -15px;
+            transform: translateX(-50%);
+            width: 60px;
+          }
+        }
+
+        .about-cta {
+          margin: 0 auto;
+        }
+      }
+
+      .about-image-wrapper {
+        margin-top: 2rem;
+      }
+    }
+
+    @include mix.respond(sm) {
+      padding: 2rem 1rem;
+      border-radius: 0.8rem;
+
+      .about-image-wrapper img {
+        max-width: 300px;
+        border-radius: 0.8rem;
+      }
+
+      .about-content p {
+        font-size: 0.95rem;
+        padding: 1rem !important;
+        line-height: 1.6;
+
+        &::before {
+          width: 40px;
+          top: -10px;
+        }
+      }
+
+      .about-cta {
+        width: 100%;
+        max-width: 300px;
+        padding: 0.7rem 1.5rem;
+      }
+    }
+  }
+
+
+  .services {
+    padding: 4rem 2rem;
+    background-color: #f4f1e1;
+    text-align: center;
+  
+    // Añadir un contenedor centrado
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    .section-title {
+      font-size: 2.5rem;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 2rem;
+      color: #b35c38;
+    }
+  
+    .services-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); // Leve ajuste a min width
+      gap: 2rem;
+  
+      .service-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        background-color: #fff;
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+        &:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+        }
+  
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 1rem;
+          margin-bottom: 1rem;
+        }
+  
+        h3 {
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+          color: #b35c38;
+        }
+  
+        p {
+          font-size: 1.125rem;
+          color: #2c2c2c;
+          margin-bottom: 1.5rem;
+        }
+  
+        .service-cta {
+          background-color: #b35c38;
+          color: #fff;
+          padding: 1rem 2rem;
+          border-radius: 2rem;
+          font-weight: 600;
+          text-decoration: none;
+          transition: background-color 0.3s ease;
+  
+          &:hover {
+            background-color: #cfa97e;
+          }
+        }
+      }
+    }
+  }
+  
+}

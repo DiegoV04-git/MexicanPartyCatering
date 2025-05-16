@@ -1,0 +1,18 @@
+// Centered container
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+  
+    @include respond(md) {
+      max-width: 720px;
+    }
+    @include respond(lg) {
+      max-width: 1024px;
+    }
+  }
+  
+  // Utility spacing classes (opcional)
+  .mt-small { margin-top: 1rem; }
+  .mb-small { margin-bottom: 1rem; }
+  

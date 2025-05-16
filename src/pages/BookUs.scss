@@ -1,0 +1,106 @@
+@use '../styles/variables' as vars;
+@use '../styles/mixins' as mix;
+
+.BookUs {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #fffaf5;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #b35c38;
+    font-family: vars.$font-heading;
+    margin-bottom: 2rem;
+  }
+
+  .booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+
+      input,
+      select {
+        flex: 1;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        border: 1px solid #e0cfc0;
+        border-radius: 0.5rem;
+        background-color: #fff;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+          border-color: vars.$color-accent;
+          outline: none;
+        }
+      }
+    }
+
+    textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border: 1px solid #e0cfc0;
+      border-radius: 0.5rem;
+      resize: vertical;
+
+      &:focus {
+        border-color: vars.$color-accent;
+        outline: none;
+      }
+    }
+
+    button {
+      align-self: center;
+      padding: 0.75rem 2rem;
+      background-color: vars.$color-accent;
+      color: #fff;
+      border: none;
+      border-radius: 2rem;
+      font-size: 1.125rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #cfa97e;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  @include mix.respond(md) {
+    padding: 1.5rem;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    .booking-form {
+      gap: 1rem;
+    }
+  }
+
+  @include mix.respond(sm) {
+    .row {
+      flex-direction: column;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+}

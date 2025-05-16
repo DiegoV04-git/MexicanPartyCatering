@@ -1,0 +1,161 @@
+@use '../styles/variables' as vars;
+@use '../styles/mixins' as mix;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: vars.$color-bg;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  padding: 1rem 0;
+}
+
+.nav.container {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  // Logo para móviles - Hide by default for desktop view
+  .logo-mobile {
+    display: none;
+    
+    .logo-img {
+      height: 80px;
+      width: auto;
+    }
+  }
+}
+
+/* Desktop nav */
+.nav-list.desktop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-item {
+    margin: 0 2rem;
+
+    .logo-img {
+      height: 100px;
+      width: auto;
+    }
+  }
+
+  a {
+    font-family: vars.$font-main;
+    font-weight: 600;
+    color: vars.$color-text;
+    text-decoration: none;
+    position: relative;
+    padding: 0.5rem 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: vars.$color-accent;
+      transition: width 0.3s;
+    }
+
+    &:hover {
+      color: vars.$color-accent;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* Hamburger button */
+.hamburger {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: vars.$color-text;
+  cursor: pointer;
+
+  &:hover {
+    color: vars.$color-accent;
+  }
+}
+
+/* Responsive styles */
+@include mix.respond(lg) {
+  .nav.container {
+    flex-direction: column;
+  }
+
+  .nav-list.desktop {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+  }
+
+  .nav.container {
+    .logo-mobile {
+      display: block !important; /* Force display for mobile view */
+      width: 100%;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .nav-list.mobile {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: vars.$color-bg;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    margin: 0;
+
+    li a {
+      font-family: vars.$font-main;
+      font-weight: 600;
+      color: vars.$color-text;
+      text-decoration: none;
+      padding: 0.75rem 0;
+      display: block;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+  }
+
+  // Ocultar logo de desktop en móvil
+  .logo-item {
+    display: none;
+  }
+}
