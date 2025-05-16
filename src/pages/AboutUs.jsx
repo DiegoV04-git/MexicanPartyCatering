@@ -1,6 +1,7 @@
 import React from 'react';
 import './AboutUs.scss';
 import AboutImg from '../assets/images/AboutImg.jpg';
+import { Link } from 'react-router-dom';
 
 const AboutUs = () => {
   return (
@@ -23,7 +24,7 @@ const AboutUs = () => {
             src={AboutImg}
             alt="Mexican catering team serving food"
           />
-          <a href="/bookus">Get a Quote!</a>
+          <Link to="/bookus">Get a Quote!</Link>
         </div>
       </div>
     </section>

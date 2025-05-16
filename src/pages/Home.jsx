@@ -7,6 +7,7 @@ import weddingCateringImage from '../assets/images/wedding.jpg';
 import privatePartyImage from '../assets/images/privatePartyImage.jpg';
 import corporateCateringImage from '../assets/images/corporateCateringImage.jpg';
 import customMenuImage from '../assets/images/customMenuImage.jpg';
+import { Link } from 'react-router-dom'; 
 
 
 const Home = () => {
@@ -18,7 +19,7 @@ const Home = () => {
           Bringing the vibrant flavors of Mexico to your events. Whether it’s a wedding, corporate event,
           or private party — our traditional recipes and professional service will make your celebration unforgettable.
         </p>
-        <a href="/menu" className="hero-cta">Explore Menu</a>
+        <Link to="/menu" className="hero-cta">Explore Menu</Link>
       </section>
       <Carousel />
       <section className="about">
@@ -27,7 +28,7 @@ const Home = () => {
           <h2>Unforgettable Mexican Flavor</h2>
           <p>
           We create unforgettable experiences with bold, authentic Mexican flavors. From tacos to ceviche, we bring the party—fresh, vibrant, and perfect for any celebration.          </p>
-          <a href="/menu" className="about-cta">View Our Menu</a>
+          <Link to="/menu" className="about-cta">View Our Menu</Link>
         </div>
         <div className="about-image-wrapper">
           <img src={catering} alt="Catering event" />
@@ -43,7 +44,7 @@ const Home = () => {
         <p>
           Make your next event unforgettable with vibrant, handcrafted Mexican cuisine. From casual gatherings to elegant celebrations, we bring the flavor—and the fun.
         </p>
-        <a href="/bookus" className="about-cta">Request a Quote</a>
+        <Link to="/bookus" className="about-cta">Request a Quote</Link>
       </div>
     </section>  
     <section className="services" id='services'>
@@ -55,7 +56,7 @@ const Home = () => {
       <p>
         A unique and flavorful menu to make the most important day of your life even more memorable.
       </p>
-      <a href="/bookus" className="service-cta">Spice Up Your Wedding</a>
+      <Link to="/bookus" className="service-cta">Spice Up Your Wedding</Link>
     </div>
     <div className="service-item">
       <img src={corporateCateringImage} alt="Corporate Events Catering" />
@@ -63,7 +64,7 @@ const Home = () => {
       <p>
         Elegant and delicious catering options for business meetings, conferences, or company events.
       </p>
-      <a href="/bookus" className="service-cta">Add Sabor to Your Event</a>
+      <Link to="/bookus" className="service-cta">Add Sabor to Your Event</Link>
     </div>
     <div className="service-item">
       <img src={privatePartyImage} alt="Private Parties Catering" />
@@ -71,7 +72,7 @@ const Home = () => {
       <p>
         From birthdays to special celebrations, we provide a one-of-a-kind gastronomic experience.
       </p>
-      <a href="/bookus" className="service-cta">Let’s Fiesta!</a>
+      <Link to="/bookus" className="service-cta">Let’s Fiesta!</Link>
     </div>
     <div className="service-item">
       <img src={customMenuImage} alt="Custom Menu" />
@@ -79,7 +80,7 @@ const Home = () => {
       <p>
         Design a unique menu tailored to your preferences, featuring the finest Mexican flavors.
       </p>
-      <a href="/bookus" className="service-cta">Craft Your Flavor Fiesta</a>
+      <Link to="/bookus" className="service-cta">Craft Your Flavor Fiesta</Link>
     </div>
   </div>
 </section>

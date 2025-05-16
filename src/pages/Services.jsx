@@ -5,6 +5,7 @@ import BrideImg from '../assets/images/bride.jpg';
 import corporateParty from '../assets/images/corporateParty.jpg';
 import PrivateParty from '../assets/images/PrivateParty.jpg';
 import CustomMenu from '../assets/images/CustomMenu.jpg';
+import  { Link } from 'react-router-dom'
 
 const Services = () => {
   const services = [
@@ -52,9 +53,9 @@ const Services = () => {
               <div className="service-info">
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
-                <a href="/bookus" className="service-cta">
+                <Link href="/bookus" className="service-cta">
                   {service.cta}
-                </a>
+                </Link>
               </div>
             </div>
           </article>
