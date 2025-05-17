@@ -53,7 +53,7 @@ const Services = () => {
               <div className="service-info">
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
-                <Link href="/bookus" className="service-cta">
+                <Link to="/bookus" className="service-cta">
                   {service.cta}
                 </Link>
               </div>
