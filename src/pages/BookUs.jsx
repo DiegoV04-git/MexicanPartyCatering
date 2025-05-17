@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from 'react-helmet';
 import emailjs from "@emailjs/browser";
 import './BookUs.scss';
 
@@ -36,7 +37,7 @@ const BookUs = () => {
         date: form.date
       }, publicKey);
 
-      // 2. Send notification to you
+      // 2. Send notification to owner
       await emailjs.send(serviceID, notifyTemplate, {
         firstName: form.firstName,
         lastName: form.lastName,
@@ -61,49 +62,79 @@ const BookUs = () => {
   };
 
   return (
-    <div className="BookUs">
-      <h2>Book Us</h2>
-      <p>For bookings or inquiries, feel free to reach out.</p>
-
-      <form onSubmit={handleSubmit} className="booking-form">
-        <div className="row">
-          <input type="text" name="firstName" placeholder="First Name" value={form.firstName} onChange={handleChange} required />
-          <input type="text" name="lastName" placeholder="Last Name" value={form.lastName} onChange={handleChange} required />
-        </div>
-
-        <div className="row">
-          <input type="email" name="email" placeholder="Email" value={form.email} onChange={handleChange} required />
-          <input type="tel" name="phone" placeholder="Phone Number" value={form.phone} onChange={handleChange} required />
-        </div>
-
-        <div className="row">
-          <select name="service" value={form.service} onChange={handleChange} required>
-            <option value="">Select Service</option>
-            <option value="Wedding">Wedding</option>
-            <option value="Corporate Party">Corporate Party</option>
-            <option value="Private Party">Private Party</option>
-            <option value="Custom Menu">Custom Menu</option>
-          </select>
-
-          <input type="date" name="date" value={form.date} onChange={handleChange} required />
-        </div>
-
-        <div className="row">
-          <input type="number" name="guests" placeholder="Approx. Guest Count" value={form.guests} onChange={handleChange} required />
-          <input type="text" name="bestTimeToCall" placeholder="Best Time to Call" value={form.bestTimeToCall} onChange={handleChange} />
-        </div>
-
-        <textarea
-          name="details"
-          placeholder="Event & Venue Details"
-          value={form.details}
-          onChange={handleChange}
-          rows="5"
+    <>
+      <Helmet>
+        <title>Book Us | Mexican Party Catering Vancouver</title>
+        <meta
+          name="description"
+          content="Book Mexican Party Catering in Vancouver for weddings, corporate events, and private parties. Fill out the form to request a quote today!"
         />
+        <link rel="canonical" href="https://mexicanpartycatering.ca/bookus" />
 
-        <button type="submit">Send Booking Request</button>
-      </form>
-    </div>
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="Book Us | Mexican Party Catering Vancouver" />
+        <meta
+          property="og:description"
+          content="Secure authentic Mexican catering for your next event in Vancouver. Weddings, corporate events, and private parties."
+        />
+        <meta property="og:image" content="https://mexicanpartycatering.ca/images/helmetImg.jpg" />
+        <meta property="og:url" content="https://mexicanpartycatering.ca/bookus" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Book Us | Mexican Party Catering Vancouver" />
+        <meta
+          name="twitter:description"
+          content="Complete the booking form to get authentic Mexican catering for weddings, corporate events, and private parties in Vancouver."
+        />
+        <meta name="twitter:image" content="https://mexicanpartycatering.ca/images/helmetImg.jpg" />
+      </Helmet>
+
+      <div className="BookUs">
+        <h2>Book Us</h2>
+        <p>For bookings or inquiries, feel free to reach out.</p>
+
+        <form onSubmit={handleSubmit} className="booking-form">
+          <div className="row">
+            <input type="text" name="firstName" placeholder="First Name" value={form.firstName} onChange={handleChange} required />
+            <input type="text" name="lastName" placeholder="Last Name" value={form.lastName} onChange={handleChange} required />
+          </div>
+
+          <div className="row">
+            <input type="email" name="email" placeholder="Email" value={form.email} onChange={handleChange} required />
+            <input type="tel" name="phone" placeholder="Phone Number" value={form.phone} onChange={handleChange} required />
+          </div>
+
+          <div className="row">
+            <select name="service" value={form.service} onChange={handleChange} required>
+              <option value="">Select Service</option>
+              <option value="Wedding">Wedding</option>
+              <option value="Corporate Party">Corporate Party</option>
+              <option value="Private Party">Private Party</option>
+              <option value="Custom Menu">Custom Menu</option>
+            </select>
+
+            <input type="date" name="date" value={form.date} onChange={handleChange} required />
+          </div>
+
+          <div className="row">
+            <input type="number" name="guests" placeholder="Approx. Guest Count" value={form.guests} onChange={handleChange} required />
+            <input type="text" name="bestTimeToCall" placeholder="Best Time to Call" value={form.bestTimeToCall} onChange={handleChange} />
+          </div>
+
+          <textarea
+            name="details"
+            placeholder="Event & Venue Details"
+            value={form.details}
+            onChange={handleChange}
+            rows="5"
+          />
+
+          <button type="submit">Send Booking Request</button>
+        </form>
+      </div>
+    </>
   );
 };
 
