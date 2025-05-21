@@ -15,11 +15,12 @@ const Home = () => {
     <>
       <Helmet>
         {/* Title and Meta Description */}
-        <title>Mexican Party Catering Vancouver | Authentic Mexican Flavors for Your Events</title>
+        <title>Mexican Party Catering Vancouver, Surrey & Langley | Authentic Mexican Food for Weddings & Events</title>
         <meta
           name="description"
-          content="Mexican Party Catering in Vancouver offers authentic Mexican cuisine for weddings, corporate events, and private parties. Make your event unforgettable!"
+          content="Looking for authentic Mexican catering in Vancouver, Surrey, or Langley? Perfect for weddings, corporate events, and private parties. Fresh, flavorful, and memorable catering for your special occasions."
         />
+
 
         {/* Canonical URL */}
         <link rel="canonical" href="https://mexicanpartycatering.ca/" />
@@ -46,7 +47,7 @@ const Home = () => {
 
       <main className="home">
         <section className="hero">
-          <h2>Authentic Mexican Catering</h2>
+          <h1>Authentic Mexican Catering</h1>
           <p>
             Bringing the vibrant flavors of Mexico to your events. Whether it’s a wedding, corporate event,
             or private party — our traditional recipes and professional service will make your celebration unforgettable.
@@ -66,13 +67,13 @@ const Home = () => {
             <Link to="/menu" className="about-cta">View Our Menu</Link>
           </div>
           <div className="about-image-wrapper">
-            <img src={catering} alt="Catering event setup with Mexican dishes" />
+            <img src={catering} alt="Mexican catering event setup in Vancouver with traditional dishes" loading='lazy' />
           </div>
         </section>
 
         <section className="about">
           <div className="about-image-wrapper">
-            <img src={tables} alt="Outdoor catered tables decorated for event" />
+            <img src={tables} alt="Outdoor catered tables decorated for event in Surrey" loading='lazy' />
           </div>
           <div className="about-content">
             <span className="subtitle">Let's Celebrate!</span>
@@ -88,25 +89,25 @@ const Home = () => {
           <h2 className="section-title">Our Services</h2>
           <div className="services-list">
             <div className="service-item">
-              <img src={weddingCateringImage} alt="Wedding catering with Mexican dishes" />
+              <img src={weddingCateringImage} alt="Wedding catering with Mexican dishes" loading='lazy'/>
               <h3>Weddings</h3>
               <p>A unique and flavorful menu to make the most important day of your life even more memorable.</p>
               <Link to="/bookus" className="service-cta">Spice Up Your Wedding</Link>
             </div>
             <div className="service-item">
-              <img src={corporateCateringImage} alt="Corporate event catering with Mexican cuisine" />
+              <img src={corporateCateringImage} alt="Corporate event catering with Mexican cuisine" loading='lazy' />
               <h3>Corporate Events</h3>
               <p>Elegant and delicious catering options for business meetings, conferences, or company events.</p>
               <Link to="/bookus" className="service-cta">Add Sabor to Your Event</Link>
             </div>
             <div className="service-item">
-              <img src={privatePartyImage} alt="Private party catering with Mexican food" />
+              <img src={privatePartyImage} alt="Private party catering with Mexican food"  loading='lazy'/>
               <h3>Private Parties</h3>
               <p>From birthdays to special celebrations, we provide a one-of-a-kind gastronomic experience.</p>
               <Link to="/bookus" className="service-cta">Let’s Fiesta!</Link>
             </div>
             <div className="service-item">
-              <img src={customMenuImage} alt="Custom menu tailored for an event" />
+              <img src={customMenuImage} alt="Custom menu tailored for an event" loading='lazy' />
               <h3>Custom Menu</h3>
               <p>Design a unique menu tailored to your preferences, featuring the finest Mexican flavors.</p>
               <Link to="/bookus" className="service-cta">Craft Your Flavor Fiesta</Link>

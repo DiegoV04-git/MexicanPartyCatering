@@ -38,7 +38,7 @@ const AboutUs = () => {
       <section className="AboutUs">
         <div className="container">
           <div className="content">
-            <h2>About Us</h2>
+            <h1>About Us</h1>
             <p>
               At <strong>Mexican Party Catering</strong>, we bring the authentic flavor of Mexico to your events.
               From handcrafted tacos to traditional drinks, our team is committed to providing you
@@ -51,6 +51,7 @@ const AboutUs = () => {
           </div>
           <div className="image-wrapper">
             <img
+              loading='lazy'
               src={AboutImg}
               alt="Mexican catering team serving food"
             />

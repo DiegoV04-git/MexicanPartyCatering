@@ -10,30 +10,33 @@ const MenuPage = () => {
   };
 
   return (
-    <div className="menu-page">
+    <main className="menu-page" role='main'>
       <div className="menu-container">
         {/* Contenido del menú */}
-        <div className="menu-content">
-          <div className="menu-header">
+        <section className="menu-content" aria-labelledby='menu-title'>
+          <header className="menu-header">
             <h1>Our Delicious Mexican Menu</h1>
             <p>Explore the authentic flavors of Mexico!</p>
-          </div>
+          </header>
 
           <div className="menu-description">
             <p>From tacos and burritos to quesadillas and salsas, our Mexican catering brings the vibrant flavors of Mexico to your events. Perfect for weddings, parties, and all special occasions!</p>
           </div>
 
           <div className="menu-button">
-            <button className="download-btn" onClick={handleDownload}>Download Our Menu</button>
+            <button className="download-btn" type='button' onClick={handleDownload}>Download Our Menu</button>
           </div>
-        </div>
+        </section>
 
         {/* Imagen del menú */}
-        <div className="menu-image-container">
-          <img src={menuPage} alt="Mexican Food" className="menu-image" />
-        </div>
+        <aside className="menu-image-container" aria-label='Image of Mexican food menu'>
+          <img src={menuPage} 
+          alt= "A delicious spread of Mexican food including tacos and salsa"
+          loading="lazy"
+          className="menu-image" />
+        </aside>
       </div>
-    </div>
+    </main>
   );
 };
 

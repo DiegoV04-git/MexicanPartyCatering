@@ -24,7 +24,7 @@
     flex-direction: column;
     gap: 1.5rem;
 
-    h2 {
+    h1{
       font-family: vars.$font-heading;
       font-size: 2.5rem;
       color: #b35c38;
@@ -41,7 +41,7 @@
     }
 
     @include mix.respond(sm) {
-      h2 {
+      h1 {
         font-size: 2rem;
       }
 
