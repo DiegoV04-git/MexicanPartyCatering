@@ -11,6 +11,48 @@ import customMenuImage from '../assets/images/customMenuImage.jpg';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FoodEstablishment",
+    "name": "Mexican Party Catering",
+    "image": "https://mexicanpartycatering.ca/images/helmetImg.jpg",
+    "@id": "https://mexicanpartycatering.ca",
+    "url": "https://mexicanpartycatering.ca/",
+    "telephone": "+1-236-512-9594",
+    "priceRange": "$$",
+    "servesCuisine": "Mexican",
+    "description": "Authentic Mexican catering for weddings, corporate events, and private parties in Vancouver, Langley, Burnaby, and surrounding areas.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Langley",
+      "addressRegion": "BC",
+      "postalCode": "V3A 2C4",
+      "addressCountry": "CA"
+    },
+    "areaServed": [
+      { "@type": "Place", "name": "Vancouver" },
+      { "@type": "Place", "name": "Langley" },
+      { "@type": "Place", "name": "Burnaby" },
+      { "@type": "Place", "name": "Delta" },
+      { "@type": "Place", "name": "Surrey" },
+      { "@type": "Place", "name": "Richmond" }
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61558219903613",
+      "https://www.yelp.com/biz/mexican-party-catering-langley"
+    ]
+  };
+
   return (
     <>
       <Helmet>
@@ -20,11 +62,8 @@ const Home = () => {
           name="description"
           content="Looking for authentic Mexican catering in Vancouver, Surrey, or Langley? Perfect for weddings, corporate events, and private parties. Fresh, flavorful, and memorable catering for your special occasions."
         />
-
-
         {/* Canonical URL */}
         <link rel="canonical" href="https://mexicanpartycatering.ca/" />
-
         {/* Open Graph for Social Sharing */}
         <meta property="og:title" content="Mexican Party Catering Vancouver" />
         <meta
@@ -34,7 +73,6 @@ const Home = () => {
         <meta property="og:image" content="https://mexicanpartycatering.ca/images/helmetImg.jpg" />
         <meta property="og:url" content="https://mexicanpartycatering.ca/" />
         <meta property="og:type" content="website" />
-
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Mexican Party Catering Vancouver" />
@@ -43,6 +81,11 @@ const Home = () => {
           content="Authentic Mexican catering for weddings, corporate events, and private parties in Vancouver."
         />
         <meta name="twitter:image" content="https://mexicanpartycatering.ca/images/helmetImg.jpg" />
+
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify(jsonLd)}
+        </script>
       </Helmet>
 
       <main className="home">

@@ -39,29 +39,79 @@
     <meta name="twitter:description" content="Authentic Mexican catering for weddings, corporate events, and private parties in Vancouver." />
     <meta name="twitter:image" content="https://mexicanpartycatering.ca/images/helmetImg.jpg" />
 
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+
     <!-- JSON‑LD Structured Data -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Mexican Party Catering",
-      "image": "https://mexicanpartycatering.ca/images/helmetImg.jpg",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Vancouver",
-        "addressRegion": "BC",
-        "postalCode": "V3A2C4",
-        "addressCountry": "CA"
-      },
-      "telephone": "+1-236-512-9594",
-      "url": "https://mexicanpartycatering.ca/",
-      "priceRange": "$$",
-      "description": "Authentic Mexican catering for weddings, corporate events, and private parties in Vancouver and Langley.",
-      "sameAs": [
-        "https://www.facebook.com/profile.php?id=61558219903613"
-      ]
-    }
-    </script>
+      {
+        "@context": "https://schema.org",
+        "@type": "FoodEstablishment",
+        "name": "Mexican Party Catering",
+        "image": "https://mexicanpartycatering.ca/images/helmetImg.jpg",
+        "@id": "https://mexicanpartycatering.ca",
+        "url": "https://mexicanpartycatering.ca/",
+        "telephone": "+1-236-512-9594",
+        "email": "mailto:mexicanpartycatering@gmail.com",
+        "priceRange": "$",
+        "servesCuisine": "Mexican",
+        "description": "Authentic Mexican catering for weddings, corporate events, and private parties in Vancouver, Langley, Burnaby, and surrounding areas.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Langley",
+          "addressRegion": "BC",
+          "postalCode": "V3A 2C4",
+          "addressCountry": "CA"
+        },
+        "areaServed": [
+          {
+            "@type": "Place",
+            "name": "Vancouver"
+          },
+          {
+            "@type": "Place",
+            "name": "Langley"
+          },
+          {
+            "@type": "Place",
+            "name": "Burnaby"
+          },
+          {
+            "@type": "Place",
+            "name": "Delta"
+          },
+          {
+            "@type": "Place",
+            "name": "Surrey"
+          },
+          {
+            "@type": "Place",
+            "name": "Richmond"
+          }
+        ],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "00:00",
+            "closes": "23:59"
+          }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=61558219903613",
+          "https://www.yelp.com/biz/mexican-party-catering-langley?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)"
+        ]
+      }
+      </script>      
   </head>
   <body>
     <div id="root"></div>

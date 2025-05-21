@@ -60,7 +60,7 @@ const ContactSection = () => {
             </Link>
           </div>
           <div className="image-wrapper">
-            <img src={ContactImg} alt="Happy customer at Mexican catering event" />
+            <img src={ContactImg} alt="Happy customer at Mexican catering event" loading='lazy'/>
           </div>
         </div>
       </section>
