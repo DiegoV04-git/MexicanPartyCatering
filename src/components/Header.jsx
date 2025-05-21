@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./Header.scss";
-import logoImg from "../assets/images/logo1.png";
+import logoImg from "../assets/images/logo1.webp";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
