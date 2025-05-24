@@ -36,7 +36,11 @@ const Header = () => {
           {/* Desktop logo centered */}
           <li className="logo-item">
             <Link to="/">
-              <img src={logoImg} alt="Logo" className="logo-img" />
+              <img src={logoImg} 
+              alt="Logo" 
+              className="logo-img"
+              loading="lazy"
+              />
             </Link>
           </li>
 

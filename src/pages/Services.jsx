@@ -78,6 +78,9 @@ const Services = () => {
                     alt={service.title} 
                     className="service-image"
                     loading="lazy"
+                    width={800} height={800}
+                    style={{ maxWidth: '100%', height: 'auto' }}
+
                   />
                 </div>
                 <div className="service-info">

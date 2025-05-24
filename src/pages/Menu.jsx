@@ -32,7 +32,8 @@ const MenuPage = () => {
         <aside className="menu-image-container" aria-label='Image of Mexican food menu'>
           <img src={menuPage} 
           alt= "A delicious spread of Mexican food including tacos and salsa"
-          className="menu-image" />
+          className="menu-image"
+          width={800} height={800} style={{ maxWidth: '100%', height: 'auto' }}/>
         </aside>
       </div>
     </main>

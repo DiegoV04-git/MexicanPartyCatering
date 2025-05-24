@@ -111,13 +111,14 @@ const Home = () => {
             <Link to="/menu" className="about-cta">View Our Menu</Link>
           </div>
           <div className="about-image-wrapper">
-            <img src={catering} alt="Mexican catering event setup in Vancouver with traditional dishes" loading='lazy' />
+            <img src={catering} alt="Mexican catering event setup in Vancouver with traditional dishes" loading='lazy' width={800} height={800} style={{ maxWidth: '100%', height: 'auto' }} 
+ />
           </div>
         </section>
 
         <section className="about">
           <div className="about-image-wrapper">
-            <img src={tables} alt="Outdoor catered tables decorated for event in Surrey" loading='lazy' />
+            <img src={tables} alt="Outdoor catered tables decorated for event in Surrey" loading='lazy' width={800} height={800} style={{ maxWidth: '100%', height: 'auto' }} />
           </div>
           <div className="about-content">
             <span className="subtitle">Let's Celebrate!</span>
@@ -133,25 +134,25 @@ const Home = () => {
           <h2 className="section-title">Our Services</h2>
           <div className="services-list">
             <div className="service-item">
-              <img src={weddingCateringImage} alt="Wedding catering with Mexican dishes" loading='lazy'/>
+              <img src={weddingCateringImage} alt="Wedding catering with Mexican dishes" loading='lazy' width={800} height={800} style={{ maxWidth: '100%', height: 'auto' }}/>
               <h3>Weddings</h3>
               <p>A unique and flavorful menu to make the most important day of your life even more memorable.</p>
               <Link to="/bookus" className="service-cta">Spice Up Your Wedding</Link>
             </div>
             <div className="service-item">
-              <img src={corporateCateringImage} alt="Corporate event catering with Mexican cuisine" loading='lazy' />
+              <img src={corporateCateringImage} alt="Corporate event catering with Mexican cuisine" loading='lazy' width={800} height={800} style={{ maxWidth: '100%', height: 'auto' }}/>
               <h3>Corporate Events</h3>
               <p>Elegant and delicious catering options for business meetings, conferences, or company events.</p>
               <Link to="/bookus" className="service-cta">Add Sabor to Your Event</Link>
             </div>
             <div className="service-item">
-              <img src={privatePartyImage} alt="Private party catering with Mexican food"  loading='lazy'/>
+              <img src={privatePartyImage} alt="Private party catering with Mexican food"  loading='lazy' width={800} height={800} style={{ maxWidth: '100%', height: 'auto' }}/>
               <h3>Private Parties</h3>
               <p>From birthdays to special celebrations, we provide a one-of-a-kind gastronomic experience.</p>
               <Link to="/bookus" className="service-cta">Let’s Fiesta!</Link>
             </div>
             <div className="service-item">
-              <img src={customMenuImage} alt="Custom menu tailored for an event" loading='lazy' />
+              <img src={customMenuImage} alt="Custom menu tailored for an event" loading='lazy'  width={800} height={800} style={{ maxWidth: '100%', height: 'auto' }}/>
               <h3>Custom Menu</h3>
               <p>Design a unique menu tailored to your preferences, featuring the finest Mexican flavors.</p>
               <Link to="/bookus" className="service-cta">Craft Your Flavor Fiesta</Link>

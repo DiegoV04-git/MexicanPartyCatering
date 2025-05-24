@@ -54,6 +54,7 @@ const AboutUs = () => {
               loading='lazy'
               src={AboutImg}
               alt="Mexican catering team serving food"
+              width={800} height={800} style={{ maxWidth: '100%', height: 'auto' }}
             />
             <Link to="/bookus">Get a Quote!</Link>
           </div>

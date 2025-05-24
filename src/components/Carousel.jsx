@@ -64,7 +64,11 @@ const CustomCarousel = () => {
       <Slider {...settings}>
   {items.map(item => (
     <div key={item.id} className="slide"> {/* Agrega clase aquí */}
-      <img src={item.img} alt="" />
+      <img src={item.img}
+       alt=""
+       width={400}
+       height={200} 
+       />
     </div>
   ))}
 </Slider>
