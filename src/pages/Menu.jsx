@@ -32,7 +32,6 @@ const MenuPage = () => {
         <aside className="menu-image-container" aria-label='Image of Mexican food menu'>
           <img src={menuPage} 
           alt= "A delicious spread of Mexican food including tacos and salsa"
-          loading="lazy"
           className="menu-image" />
         </aside>
       </div>

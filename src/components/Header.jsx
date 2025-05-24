@@ -22,7 +22,7 @@ const Header = () => {
       <nav className="nav container">
         {/* Mobile logo */}
         <Link to="/" className="logo-mobile">
-          <img src={logoImg} alt="Logo" className="logo-img" />
+          <img src={logoImg} alt="Logo" className="logo-img"  loading="lazy"/>
         </Link>
 
         {/* Desktop nav */}

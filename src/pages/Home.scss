@@ -3,6 +3,19 @@
 @use '../styles/mixins' as mix;
 
 .home {
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  
+
   .hero {
     padding: 4rem 1rem;
     background-color: vars.$color-bg;
@@ -309,3 +322,4 @@
   }
   
 }
+

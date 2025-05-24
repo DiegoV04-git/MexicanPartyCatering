@@ -89,6 +89,7 @@ const Home = () => {
       </Helmet>
 
       <main className="home">
+      <h2 className="sr-only">Mexican Party Catering Services and Information</h2>
         <section className="hero">
           <h1>Authentic Mexican Catering</h1>
           <p>
