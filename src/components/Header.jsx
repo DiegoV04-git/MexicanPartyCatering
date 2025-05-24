@@ -40,6 +40,8 @@ const Header = () => {
               alt="Logo" 
               className="logo-img"
               loading="lazy"
+              width={80}
+              height={80}
               />
             </Link>
           </li>
