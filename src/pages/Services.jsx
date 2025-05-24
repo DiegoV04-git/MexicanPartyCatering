@@ -2,10 +2,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import './Services.scss';
-import BrideImg from '../assets/images/bride.jpg';
-import corporateParty from '../assets/images/corporateParty.jpg';
-import PrivateParty from '../assets/images/PrivateParty.jpg';
-import CustomMenu from '../assets/images/CustomMenu.jpg';
+import BrideImg from '../assets/images/bride.webp';
+import corporateParty from '../assets/images/corporateParty.webp';
+import PrivateParty from '../assets/images/PrivateParty.webp';
+import CustomMenu from '../assets/images/CustomMenu.webp';
 import { Link } from 'react-router-dom';
 
 const Services = () => {

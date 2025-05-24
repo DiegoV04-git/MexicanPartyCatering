@@ -2,12 +2,12 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import './Home.scss';
 import Carousel from '../components/Carousel'; 
-import catering from '../assets/images/catering.jpg'; 
-import tables from '../assets/images/tables.jpg'; 
-import weddingCateringImage from '../assets/images/wedding.jpg';
-import privatePartyImage from '../assets/images/privatePartyImage.jpg';
-import corporateCateringImage from '../assets/images/corporateCateringImage.jpg';
-import customMenuImage from '../assets/images/customMenuImage.jpg';
+import catering from '../assets/images/catering.webp'; 
+import tables from '../assets/images/tables.webp'; 
+import weddingCateringImage from '../assets/images/wedding.webp';
+import privatePartyImage from '../assets/images/privatePartyImage.webp';
+import corporateCateringImage from '../assets/images/corporateCateringImage.webp';
+import customMenuImage from '../assets/images/customMenuImage.webp';
 import { Link } from 'react-router-dom';
 
 const Home = () => {

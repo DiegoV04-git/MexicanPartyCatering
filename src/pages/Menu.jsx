@@ -1,6 +1,6 @@
 import React from 'react';
 import './Menu.scss';
-import menuPage from '../assets/images/menuPage.jpg';
+import menuPage from '../assets/images/menuPage.webp';
 
 const MenuPage = () => {
   const handleDownload = () => {

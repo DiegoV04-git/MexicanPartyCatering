@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import './AboutUs.scss';
-import AboutImg from '../assets/images/AboutImg.jpg';
+import AboutImg from '../assets/images/AboutImg.webp';
 import { Link } from 'react-router-dom';
 
 const AboutUs = () => {

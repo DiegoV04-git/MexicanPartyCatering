@@ -2,10 +2,10 @@
 import React from 'react';
 import Slider from 'react-slick';
 
-import slider01 from '../assets/images/slider01.jpg';
-import slider02 from '../assets/images/slider02.jpg';
-import slider03 from '../assets/images/slider03.jpg';
-import slider04 from '../assets/images/slider04.jpg';
+import slider01 from '../assets/images/slider01.webp';
+import slider02 from '../assets/images/slider02.webp';
+import slider03 from '../assets/images/slider03.webp';
+import slider04 from '../assets/images/slider04.webp';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';

@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import './contact.scss';
 import { FaWhatsapp, FaEnvelope, FaFacebookF } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import ContactImg from '../assets/images/contactUs.jpg';
+import ContactImg from '../assets/images/contactUs.webp';
 
 const ContactSection = () => {
   return (
