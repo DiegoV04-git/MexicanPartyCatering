@@ -93,7 +93,13 @@ const BookUs = () => {
 
       <div className="BookUs">
         <h2>Book Us</h2>
-        <p>For bookings or inquiries, feel free to reach out.</p>
+        <p>Thank you for your interest in Mexican Party Catering.</p>
+
+        <div className="notice">
+          <p className="paused-message">
+            Please note: We are currently not accepting new event requests as we undergo a temporary service pause. Updates will be posted here when bookings reopen.
+          </p>
+        </div>
 
         <form onSubmit={handleSubmit} className="booking-form">
           <div className="row">
